@@ -1,0 +1,15 @@
+@use "../../../App/index"
+.button
+  border: index.$main-border 0.1rem solid
+  border-radius: 0.5rem
+  background: index.$main-background
+  width: clamp(1rem, 20vw, 6rem)
+  height: clamp(1rem, 10vw, 3rem)
+  padding: 0.5rem
+  transition: all 0.5s, border 0s
+  cursor: pointer
+  &:hover
+    border: none
+    background: index.$second-background
+    color: white
+    padding: 0.6rem

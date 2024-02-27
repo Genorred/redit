@@ -1,0 +1,29 @@
+@use '../../../App/index'
+.navigationBox
+  display: flex
+  flex-direction: column
+  align-items: center
+  background-color: index.$second-background
+  min-height: 20svh
+  input
+    margin: 1vw
+.topicsBox
+  display: flex
+  justify-content: center
+  position: relative
+.transparentBlock
+  pointer-events: none
+  z-index: 2
+  background: linear-gradient(to left, index.$second-background, transparent 5%, transparent 95%, index.$second-background)
+  position: absolute
+  top: 0
+  bottom: 0
+  right: 0
+  left: 0
+::-webkit-scrollbar-track
+  background-color: index.$second-background !important
+::-webkit-scrollbar-thumb
+  background-color: #555
+  border-radius: 6px
+::-webkit-scrollbar-thumb:hover
+  background-color: index.$second-color !important

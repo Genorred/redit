@@ -1,0 +1,25 @@
+@use "../../../App/index"
+.navbar
+  display: grid
+  grid-template-columns: 1fr 1fr 7fr 1fr 1fr
+  height: 5rem
+  width: 100%
+  background: index.$second-background
+  *
+    justify-self: center
+    text-decoration: none
+  a
+    color: index.$second-color
+    border-bottom-color: index.$main-border
+    transition: background-color 0.5s, border-bottom-color 0.5s
+    display: flex
+    justify-content: center
+    align-items: center
+    text-align: center
+    width: 5rem
+    height: 4.7rem
+    &:hover
+      background: rgba(128, 128, 128, 0.27)
+      border-bottom: 0.3rem index.$second-color solid
+  &Button:hover
+    border: white 1px solid

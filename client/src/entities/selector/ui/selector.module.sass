@@ -1,0 +1,59 @@
+$fontSize: clamp(0.5rem, 1vw, 1rem)
+$rowHeight: calc($fontSize*3)
+@mixin row
+  height: $rowHeight
+  display: flex
+  align-items: center
+  justify-content: center
+.scrollWrapper
+  position: relative
+  width: clamp(7rem, 12vw, 10rem)
+  height: $rowHeight
+
+.selector
+  text-align: center
+  max-height: $rowHeight
+  position: absolute
+  width: 100%
+  top: 0
+  border: 1.5px solid black
+  transition: all 0.5s ease-in-out
+  overflow: hidden
+  font-size: $fontSize
+  .selectedChoice
+    @include row
+    border: none
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1)
+    text-align: center
+    position: sticky
+    top: 0
+    width: 100%
+    background-color: white
+    cursor: pointer
+  input::placeholder
+    font-size: $fontSize
+    color: black
+    text-align: center
+  input
+    outline: none
+  input:focus::placeholder
+    opacity: 0.3
+
+  .selectingArray
+    visibility: hidden
+    background-color: white
+    transition: all 0.4s
+    .spinner
+      padding: 5px 0
+      display: flex
+      justify-content: center
+  .choice
+    @include row
+    border-bottom: 1px solid black
+.show
+  overflow-y: scroll
+  max-height: 60vh
+  .selectingArray
+    visibility: visible
+.observableDiv
+  height: 10px

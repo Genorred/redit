@@ -1,0 +1,21 @@
+@use "../../../App/index"
+.input
+  width: clamp(250px, 90vw, 600px)
+  height: clamp(40px, 10vw, 50px)
+  border: index.$main-border solid
+  border-radius: clamp(5px, 5vw, 10px)
+  padding: 0 clamp(0.5rem, 2vw, 1rem)
+  margin: 5px 0
+  transition: all 0.3s
+  &::-ms-input-placeholder
+    font-weight: 600
+  &:focus
+    transform: scale(1.01) translate(0px, -1px)
+input::-webkit-inner-spin-button,
+input::-webkit-outer-spin-button
+    -webkit-appearance: none
+.InvalidInput
+  box-shadow: 0 0 1.5px 2px index.$error-color
+  border-color: index.$error-color
+  &:focus
+    outline: index.$error-color 3px solid

@@ -1,0 +1,36 @@
+@use "../../../App/index"
+.form
+  display: flex
+  flex-direction: column
+  align-items: center
+  width: clamp(400px, 50vw, 800px)
+  height: clamp(400px, 50vh, 800px)
+  border: solid clamp(1px, 1vw, 5px) index.$main-border
+  border-radius: clamp(10px, 8vw, 20px)
+  @media (max-width: 1400px)
+    width: clamp(150px, 80vw, 800px)
+    border: none
+    height: clamp(100px, 30vh, 800px)
+    justify-content: space-around
+  &Card
+    display: flex
+    flex-direction: column
+    align-content: center
+    align-items: center
+  &Inputs
+    display: flex
+    flex-direction: column
+    justify-content: center
+    width: 100%
+
+  &Title
+    padding: 1rem 0
+    font-size: clamp(1.5rem, 6%, 3rem)
+    font-weight: bold
+
+  &Actions
+    display: flex
+    width: 100%
+    justify-content: space-between
+    p
+      max-width: 50%

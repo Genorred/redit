@@ -1,0 +1,17 @@
+@use '../../../App/index'
+.spinner
+  width: 50px
+  height: 50px
+  border: 6px solid
+  border-color: black transparent
+  border-radius: 50%
+  color: index.$main-color
+  animation: 1s spin infinite
+@keyframes spin
+  from
+    color: index.$main-color
+    transform: rotate(0deg)
+  to
+    color: index.$second-color
+    transform: rotate(360deg)
+

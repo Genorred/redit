@@ -1,0 +1,32 @@
+.postCard
+  display: flex
+  justify-content: space-between
+  .field
+    display: inline-block
+    padding: 1vw
+    text-align: center
+    width: clamp(60vw, 50%, 80vw)
+    min-height: 30%
+  .field::before
+    color: #555555
+    content: attr(data-placeholder)
+  .show
+    *
+      visibility: visible
+      opacity: 1
+  .add
+    cursor: pointer
+    padding: 1vw
+    max-width: 50px
+
+  h1, h2, h3, h4, h5, h6
+    font-size: 30px
+    font-weight: bold
+button
+  margin-top: auto
+
+.title
+  font-weight: bold
+  font-size: clamp(2rem, 4vw, 6rem)
+.text
+  font-size: clamp(1rem, 2vw, 3rem)
